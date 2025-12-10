@@ -1,31 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { THEME } from "../theme";
-import translations from "../locales/translations.json"; // import translations
-import dropmeLogo from "../assets/images/dropme-logo-title.png"; // import your logo
+import translations from "../locales/translations.json";
+import dropmeLogo from "../assets/images/dropme-logo-title.png";
 
 export default function ContentCard({ lang }) {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
+  const current = translations[lang].delete_account;
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
-    console.log("User requested deletion:", email);
   };
 
-  const current = translations[lang].delete_account;
-
-  // Set browser tab title and favicon
+  // Set browser tab title + favicon (always English)
   useEffect(() => {
-    document.title = "DropMe - Delete Account"; // always English
+    document.title = "DropMe - Delete Account";
 
-    // Update favicon
     const link =
-      document.querySelector("link[rel~='icon']") || document.createElement("link");
+      document.querySelector("link[rel~='icon']") ||
+      document.createElement("link");
+
     link.rel = "icon";
-    link.href = dropmeLogo; // path to your logo
-    document.getElementsByTagName("head")[0].appendChild(link);
+    link.href = dropmeLogo;
+    document.head.appendChild(link);
   }, []);
 
   return (
@@ -40,68 +39,77 @@ export default function ContentCard({ lang }) {
       >
         <div
           dir={lang === "en" ? "ltr" : "rtl"}
-          className="w-full max-w-3xl bg-secondary-color p-6 sm:p-10 rounded-2xl shadow-sm border"
-          style={{ borderColor: THEME.border }}
+          className="w-full max-w-3xl bg-[#F3F8EBA3] p-6 sm:p-10 rounded-2xl shadow-sm border border-gray-300"
         >
-          {/* Logo + Title */}
+          {/* LOGO + Heading */}
           <div className="flex flex-col items-center mb-8">
-           
-            <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-primary-color mb-2">
+     
+
+            <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-[#7BAB43] mb-2">
               {current.heading}
             </h1>
-            <p className="text-gray-500 md:text-lg lg:text-xl">{current.subtitle}</p>
+            <p className="text-gray-500 md:text-lg lg:text-xl">
+              {current.subtitle}
+            </p>
           </div>
 
-          {/* Deletion Policy */}
+          {/* POLICY */}
           <section className="mb-10">
-            <h2 className="font-semibold text-xl md:text-2xl mb-2 text-primary-color">
+            <h2 className="font-semibold text-xl md:text-2xl mb-2 text-[#7BAB43]">
               {current.policyTitle}
             </h2>
-            <p className="text-text-color mb-4">{current.policyText}</p>
+
+            <p className="text-[#111827] mb-4">{current.policyText}</p>
+
             <p className="text-red-600 font-semibold mb-4">{current.warning}</p>
 
-            <h3 className="font-semibold text-lg mb-2 text-primary-color">
+            <h3 className="font-semibold text-lg mb-2 text-[#7BAB43]">
               {current.stepsTitle}
             </h3>
+
             <ol
-              className={`list-decimal list-inside space-y-2 text-text-color ${
+              className={`list-decimal list-inside space-y-2 text-[#111827] ${
                 lang === "en" ? "pl-4" : "pr-4"
               }`}
             >
-              {current.steps.map((step, idx) => (
-                <li key={idx}>{step}</li>
+              {current.steps.map((step, i) => (
+                <li key={i}>{step}</li>
               ))}
             </ol>
           </section>
 
-          {/* Request Form */}
+          {/* FORM */}
           <section className="mb-10">
-            <h2 className="font-semibold text-xl md:text-2xl mb-3 text-primary-color">
+            <h2 className="font-semibold text-xl md:text-2xl mb-3 text-[#7BAB43]">
               {current.formTitle}
             </h2>
 
             {submitted ? (
-              <div className="p-4 rounded-lg mb-4 bg-white border-l-4 border-primary-color">
-                <p className="text-green-700 font-medium">{current.successMessage}</p>
+              <div className="p-4 rounded-lg mb-4 bg-white border-l-4 border-[#7BAB43]">
+                <p className="text-green-700 font-medium">
+                  {current.successMessage}
+                </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block mb-1 font-medium">{current.emailLabel}</label>
+                  <label className="block mb-1 font-medium">
+                    {current.emailLabel}
+                  </label>
+
                   <input
                     required
                     type="email"
-                    placeholder="example@email.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full p-3 border rounded-md"
-                    style={{ borderColor: THEME.border }}
+                    placeholder="example@email.com"
+                    className="w-full p-3 border border-gray-300 rounded-md"
                   />
                 </div>
+
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-md font-semibold text-white"
-                  style={{ background: THEME.primary }}
+                  className="w-full py-3 rounded-md font-semibold text-white bg-[#7BAB43] hover:bg-[#6d973c] transition"
                 >
                   {current.submitButton}
                 </button>
@@ -109,16 +117,18 @@ export default function ContentCard({ lang }) {
             )}
           </section>
 
-          {/* Contact Support */}
+          {/* CONTACT */}
           <section>
-            <h2 className="font-semibold text-xl md:text-2xl mb-3 text-primary-color">
+            <h2 className="font-semibold text-xl md:text-2xl mb-3 text-[#7BAB43]">
               {current.contactTitle}
             </h2>
-            <p className="text-text-color">{current.contactText}</p>
+
+            <p className="text-[#111827]">{current.contactText}</p>
+
             <div className="mt-4 px-4 py-4 rounded-lg bg-white border-l-4 border-orange-500">
               <a
                 href={`mailto:${current.contactEmail}`}
-                className="font-semibold text-lg text-primary-color hover:text-hover-color transition"
+                className="font-semibold text-lg text-[#7BAB43] hover:text-[#6d973c] transition"
               >
                 {current.contactEmail}
               </a>

@@ -8,23 +8,24 @@ function App() {
   const [lang, setLang] = useState("en");
 
   // Toggle language between English and Arabic
-  const TranslateFunc = () => setLang(prev => (prev === "en" ? "ar" : "en"));
+  const TranslateFunc = () =>
+    setLang((prev) => (prev === "en" ? "ar" : "en"));
 
   return (
-    <div className="flex flex-col min-h-screen" dir={lang === "en" ? "ltr" : "rtl"}>
+    <>
       {/* Header */}
       <Navbar lang={lang} TranslateFunc={TranslateFunc} />
 
-      {/* Main Content */}
-      <main className="flex-grow grid grid-cols-12 px-4 md:px-0">
+      {/* Main Content (same layout as old project) */}
+      <div className="grid grid-cols-12 px-4 md:px-0">
         <div className="col-span-12 md:col-start-2 md:col-span-10 lg:col-start-3 lg:col-span-8">
           <ContentCard lang={lang} />
         </div>
-      </main>
+      </div>
 
       {/* Footer */}
       <Footer />
-    </div>
+    </>
   );
 }
 

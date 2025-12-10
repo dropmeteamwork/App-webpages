@@ -2,11 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "outlit";
-  src: url("./assets/fonts/Outfit/Outfit-VariableFont_wght.ttf") format("truetype");
+/* DaisyUI themes */
+@plugin "daisyui" {
+  themes: light --default;
 }
 
+/* Font */
+@font-face {
+  font-family: "outlit";
+  src: url("./assets/fonts/Outfit/Outfit-VariableFont_wght.ttf")
+    format("truetype");
+  font-style: normal;
+}
+
+/* Global font */
 body {
   font-family: "outlit", sans-serif;
+}
+
+/* Custom theme variables */
+@theme {
+  --color-primary-color: #7bab43;
+  --color-hover-color: #6d973c;
+  --color-secondary-color: #f3f8eba3;
+  --color-shade-grey: #f8f8f8;
+  --color-text-color: #111827;
 }
