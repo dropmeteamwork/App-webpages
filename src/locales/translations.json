@@ -2,22 +2,18 @@
   "en": {
     "delete_account": {
       "heading": "Account & Data Deletion",
-      "subtitle": "Request removal of your account and all associated data.",
-      "policyTitle": "DropMe Account Deletion Policy",
-      "policyText": "We at DropMe are keen to keep all our data private and highly secure for the comfort of our users.",
+      "subtitle": "Removing your account and all associated data.",
+      "policyTitle": "Drop Me Account Deletion Policy",
+      "policyText": "We at Drop Me are keen to keep all our data private and highly secure for the comfort of our users.",
       "warning": "Warning: Deleting your account means all data, activities, and history will be permanently deleted and cannot be recovered.",
       "stepsTitle": "Steps to Delete Your Account:",
       "steps": [
-        "Go to Settings in the Profile tab.",
-        "Navigate to the \"Account Settings\" section from the main menu.",
-        "Scroll to the \"Delete Account\" section at the bottom of the screen.",
-        "Please read and accept the terms to proceed with account deletion.",
-        "Carefully read the important reminders: deleting your account will result in loss of access to all account features and data. Note that your data will be retained for 60 days to protect your rights to remaining services. Once accepted, click 'Submit'."
-      ],
-      "formTitle": "Submit Deletion Request",
-      "emailLabel": "Your Email",
-      "submitButton": "Request Data Deletion",
-      "successMessage": "Your deletion request has been received. We will process it within 48 hours.",
+        "Click on the three lines icon at the top to open Settings.",
+        "Tap on the Account icon.",
+        "Scroll down and select 'Delete Account'.",
+        "A confirmation window will appear asking 'Are you sure?'. Click 'OK' to proceed."
+        ],
+
       "contactTitle": "Contact Support",
       "contactText": "If you prefer, you can email us at:",
       "contactEmail": "hello@dropmeeg.com"
@@ -26,22 +22,17 @@
   "ar": {
     "delete_account": {
       "heading": "حذف الحساب والبيانات",
-      "subtitle": "اطلب إزالة حسابك وجميع البيانات المرتبطة به.",
-      "policyTitle": "سياسة حذف حساب DropMe",
-      "policyText": "نحن في DropMe نحرص على الحفاظ على جميع بياناتنا آمنة وخاصة من أجل راحة مستخدمينا.",
-      "warning": "تحذير: حذف حسابك يعني أن جميع البيانات والأنشطة والتاريخ سيتم حذفها نهائيًا ولا يمكن استعادتها.",
+      "subtitle": "إزالة حسابك وجميع البيانات المرتبطة به.",
+      "policyTitle": "سياسة حذف حساب Drop Me",
+      "policyText": "نحن في Drop Me نحرص على الحفاظ على جميع بياناتنا آمنة وخاصة من أجل راحة مستخدمينا.",
+      "warning": "تحذير: حذف حسابك يعني أن جميع البيانات والأنشطة سيتم حذفها نهائيًا ولا يمكن استعادتها.",
       "stepsTitle": "خطوات حذف الحساب:",
       "steps": [
-        "اذهب إلى الإعدادات في تبويب الملف الشخصي.",
-        "انتقل إلى قسم 'إعدادات الحساب' من القائمة الرئيسية.",
-        "انتقل إلى قسم 'حذف الحساب' في أسفل الشاشة.",
-        "يرجى قراءة الشروط والموافقة عليها للمتابعة في حذف الحساب.",
-        "اقرأ التنبيهات الهامة بعناية: حذف حسابك سيؤدي إلى فقدان الوصول إلى جميع ميزات الحساب والبيانات. ستظل بياناتك محفوظة لمدة 60 يومًا لحماية حقوقك في الخدمات المتبقية. بعد الموافقة، اضغط 'إرسال'."
+        "اضغط على أيقونة الثلاث خطوط في الأعلى لفتح الإعدادات.",
+        "اضغط على أيقونة الحساب.",
+        "انتقل للأسفل واختر 'حذف الحساب'.",
+        "ستظهر نافذة تأكيد تسأل 'هل أنت متأكد؟'. اضغط 'موافق' للمتابعة."
       ],
-      "formTitle": "إرسال طلب حذف الحساب",
-      "emailLabel": "بريدك الإلكتروني",
-      "submitButton": "طلب حذف البيانات",
-      "successMessage": "تم استلام طلب حذف حسابك. سنقوم بمعالجته خلال 48 ساعة.",
       "contactTitle": "تواصل مع الدعم",
       "contactText": "إذا رغبت، يمكنك مراسلتنا على البريد الإلكتروني:",
       "contactEmail": "hello@dropmeeg.com"

@@ -14,7 +14,6 @@ export default function ContentCard({ lang }) {
     setSubmitted(true);
   };
 
-  // Set browser tab title + favicon (always English)
   useEffect(() => {
     document.title = "DropMe - Delete Account";
 
@@ -43,8 +42,6 @@ export default function ContentCard({ lang }) {
         >
           {/* LOGO + Heading */}
           <div className="flex flex-col items-center mb-8">
-     
-
             <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-[#7BAB43] mb-2">
               {current.heading}
             </h1>
@@ -76,45 +73,6 @@ export default function ContentCard({ lang }) {
                 <li key={i}>{step}</li>
               ))}
             </ol>
-          </section>
-
-          {/* FORM */}
-          <section className="mb-10">
-            <h2 className="font-semibold text-xl md:text-2xl mb-3 text-[#7BAB43]">
-              {current.formTitle}
-            </h2>
-
-            {submitted ? (
-              <div className="p-4 rounded-lg mb-4 bg-white border-l-4 border-[#7BAB43]">
-                <p className="text-green-700 font-medium">
-                  {current.successMessage}
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label className="block mb-1 font-medium">
-                    {current.emailLabel}
-                  </label>
-
-                  <input
-                    required
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="example@email.com"
-                    className="w-full p-3 border border-gray-300 rounded-md"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full py-3 rounded-md font-semibold text-white bg-[#7BAB43] hover:bg-[#6d973c] transition"
-                >
-                  {current.submitButton}
-                </button>
-              </form>
-            )}
           </section>
 
           {/* CONTACT */}
